@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiere im Winter</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f7f4;
+    color: #333;
+}
+
+header {
+    background: #2c5530;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.search-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 300px;
+    max-width: 90%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.winterschlaf { background: #4caf50; }
+.winterruhe { background: #2196f3; }
+.winterstarre { background: #9c27b0; }
+.winteraktiv { background: #ff9800; }
+.zugvogel { background: #f44336; }
+
+summary {
+    cursor: pointer;
+    padding: 10px;
+    background: #eef5ee;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+details {
+    margin-top: 10px;
+}
+
+details[open] {
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+details p {
+    margin: 8px 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🐾 Tiere im Winter</h1>
+    <p>Wie überleben Tiere die kalte Jahreszeit?</p>
+</header>
+
+<div class="search-container">
+    <input type="text" id="search" placeholder="Tier suchen..." onkeyup="filterCards()">
+</div>
+
+<div class="container">
+
+    <div class="card animal">
+        <div class="tag winterschlaf">Winterschlaf</div>
+        <h2>Igel</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Der Igel hält von November bis März Winterschlaf und lebt von seinen Fettreserven.</p>
+
+            <p><strong>Feinde:</strong>
+            Fuchs, Dachs, Uhu und große Hunde.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Besitzt bis zu 8.000 Stacheln.</p>
+
+            <p><strong>Fun Fact:</strong>
+            Sein Herzschlag sinkt im Winterschlaf auf weniger als 20 Schläge pro Minute.</p>
+        </details>
+    </div>
+
+    <div class="card animal">
+        <div class="tag winterschlaf">Winterschlaf</div>
+        <h2>Fledermaus</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Fledermäuse überwintern in Höhlen, Stollen oder Kellern.</p>
+
+            <p><strong>Feinde:</strong>
+            Eulen, Marder und Katzen.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Orientieren sich durch Echoortung.</p>
+
+            <p><strong>Fun Fact:</strong>
+            Sie können kopfüber schlafen, ohne herunterzufallen.</p>
+        </details>
+    </div>
+
+    <div class="card animal">
+        <div class="tag winterruhe">Winterruhe</div>
+        <h2>Eichhörnchen</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Eichhörnchen halten Winterruhe und suchen regelmäßig Nahrung.</p>
+
+            <p><strong>Feinde:</strong>
+            Habicht, Uhu und Baummarder.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Legen viele Futterverstecke an.</p>
+
+            <p><strong>Fun Fact:</strong>
+            Vergessene Nüsse können zu neuen Bäumen werden.</p>
+        </details>
+    </div>
+
+    <div class="card animal">
+        <div class="tag winterruhe">Winterruhe</div>
+        <h2>Braunbär</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Braunbären verbringen den Winter in ihrer Höhle.</p>
+
+            <p><strong>Feinde:</strong>
+            Erwachsene Tiere haben kaum natürliche Feinde.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Leben von Fettreserven.</p>
+
+            <p><strong>Fun Fact:</strong>
+            In der Winterruhe können Bärenjunge geboren werden.</p>
+        </details>
+    </div>
+
+    <div class="card animal">
+        <div class="tag winterstarre">Winterstarre</div>
+        <h2>Frosch</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Frösche fallen im Winter in Winterstarre.</p>
+
+            <p><strong>Feinde:</strong>
+            Reiher, Störche und Ringelnattern.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Überwintern oft im Schlamm.</p>
+
+            <p><strong>Fun Fact:</strong>
+            Ihr Stoffwechsel wird stark verlangsamt.</p>
+        </details>
+    </div>
+
+    <div class="card animal">
+        <div class="tag winteraktiv">Winteraktiv</div>
+        <h2>Fuchs</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Füchse bleiben das ganze Jahr aktiv.</p>
+
+            <p><strong>Feinde:</strong>
+            Erwachsene Tiere haben kaum natürliche Feinde.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Sehr anpassungsfähig.</p>
+
+            <p><strong>Fun Fact:</strong>
+            Ein Fuchs hört Mäuse selbst unter Schnee.</p>
+        </details>
+    </div>
+
+    <div class="card animal">
+        <div class="tag winteraktiv">Winteraktiv</div>
+        <h2>Reh</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Rehe bleiben den Winter über aktiv.</p>
+
+            <p><strong>Feinde:</strong>
+            Wolf und Luchs.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Dichteres Winterfell.</p>
+
+            <p><strong>Fun Fact:</strong>
+            Sie sparen Energie durch weniger Bewegung.</p>
+        </details>
+    </div>
+
+    <div class="card animal">
+        <div class="tag zugvogel">Zugvogel</div>
+        <h2>Weißstorch</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Der Weißstorch zieht im Herbst nach Afrika.</p>
+
+            <p><strong>Feinde:</strong>
+            Vor allem Eier und Jungtiere sind gefährdet.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Fliegt tausende Kilometer.</p>
+
+            <p><strong>Fun Fact:</strong>
+            Nutzt warme Aufwinde zum Segelflug.</p>
+        </details>
+    </div>
+
+    <div class="card animal">
+        <div class="tag zugvogel">Zugvogel</div>
+        <h2>Kranich</h2>
+
+        <details>
+            <summary>Mehr erfahren</summary>
+
+            <p><strong>Beschreibung:</strong>
+            Kraniche ziehen im Herbst in große Schwärmen Richtung Süden.</p>
+
+            <p><strong>Feinde:</strong>
+            Vor allem Eier und Küken werden bedroht.</p>
+
+            <p><strong>Besonderheiten:</strong>
+            Fliegen in V-Formation.</p>
+
+            <p><strong>Fun Fact:</strong>
+            Ihre Rufe sind mehrere Kilometer weit hörbar.</p>
+        </details>
+    </div>
+
+</div>
+
+<script>
+function filterCards() {
+    const input = document
+        .getElementById('search')
+        .value
+        .toLowerCase();
+
+    document.querySelectorAll('.animal').forEach(card => {
+        card.style.display =
+            card.innerText.toLowerCase().includes(input)
+            ? 'block'
+            : 'none';
+    });
+}
+</script>
+
+</body>
+</html>
